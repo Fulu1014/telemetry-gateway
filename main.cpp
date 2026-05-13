@@ -95,7 +95,7 @@ int main(int argc,char* argv[]){
     // 2. 初始化连接池
      // 参数依次是：IP地址, MySQL用户名, MySQL密码, 数据库名, 端口号, 最大连接数
      // ⚠️ 极其重要：请把 "root" 和 "your_password" 改成你虚拟机里真实的 MySQL 账号密码！
-    connPool->init("localhost", "telemetry", "123456", "telemetry_db", 3306, 8);
+    connPool->init("localhost", "your_mysql_username", "your_mysql_password", "telemetry_db", 3306, 8);
     // 初始化异步日志系统（文件名为 gateway.log，缓冲区8192，队列容量800）
     Log::get_instance()->init("gateway.log", 8192, 800);
     LOG_INFO("数据库连接池初始化成功，已预先建立 8 个连接！");

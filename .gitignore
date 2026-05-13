@@ -1,0 +1,116 @@
+# ==================== C++ 编译产物 ====================
+# 目标文件
+*.o
+*.obj
+*.ko
+*.elf
+# 可执行文件
+*.out
+*.exe
+*.app
+gateway
+server
+webserver
+# 静态库/动态库
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+# 预编译头
+*.gch
+*.pch
+# 调试文件
+*.d
+*.sym
+*.map
+core.*
+vgcore.*
+# CMake 生成文件
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+build/
+bin/
+lib/
+
+# ==================== 日志文件 ====================
+*.log
+gateway.log
+access.log
+error.log
+logs/
+
+# ==================== 数据库相关 ====================
+*.sql
+*.db
+*.sqlite
+# 数据库配置文件（敏感信息，绝对不能上传！）
+db_config.h
+mysql_config.h
+
+# ==================== IDE 配置文件 ====================
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+# CLion
+.idea/
+*.iml
+*.iws
+*.ipr
+cmake-build-*/
+# Vim
+*.swp
+*.swo
+*~
+# Eclipse
+.cproject
+.project
+.settings/
+# Qt
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile.Debug
+Makefile.Release
+
+# ==================== 操作系统临时文件 ====================
+# Linux
+*~
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+# Windows
+*.exe
+*.dll
+*.obj
+*.pdb
+*.ilk
+*.res
+*.rc
+
+# ==================== 第三方库（如果是本地拷贝的话） ====================
+json.hpp
+nlohmann/
+mysql/
+pthread/
+
+# ==================== 其他 ====================
+*.tar.gz
+*.zip
+*.rar
+TODO.md
+notes.txt
+test/
+debug/
+release/

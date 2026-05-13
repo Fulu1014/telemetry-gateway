@@ -66,3 +66,25 @@ sudo apt-get install g++ make libmysqlclient-dev
 
 # CentOS
 sudo yum install gcc-c++ make mysql-devel
+
+##数据库配置
+-创建数据库和表
+# sql
+CREATE DATABASE telemetry_db;
+USE telemetry_db;
+
+CREATE TABLE device_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    device_id VARCHAR(64) NOT NULL,
+    status VARCHAR(32) NOT NULL,
+    create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+##修改 main.cpp 中的数据库配置
+// 第98行，改成你自己的MySQL账号密码
+connPool->init("localhost", "your_mysql_username", "your_mysql_password", "telemetry_db", 3306, 8);
+
+##📧 联系方式
+- 作者：黄福路
+- 邮箱：709287419@qq.com
+- GitHub：https://github.com/fulu1014/telemetry-gateway
